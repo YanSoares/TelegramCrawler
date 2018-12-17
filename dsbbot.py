@@ -4,10 +4,10 @@ import dontpad
 import re
 
 # ID DO TELEGRAM DESTINO
-telegram_destino = 364276001
+telegram_destino = #ID DO TELEGRAM DESTINO
 
 # TOKEN GERADO PELA BOTFATHER DO TELEGRAM
-token = "611032927:AAG9jxBgvaiKM-EvJQ7Z2j28IlLRZ1I65GA"
+token = #TOKE DO TELEGRAM GERADO PELO BOTFATHER
 
 # ATRIBUINDO À VARIAVEL bot O NOSSO BOT CRIADO PELO BOTFATHER
 bot = telebot.TeleBot(token)
@@ -24,7 +24,7 @@ def handle_docs(message):
 
     file_info = bot.get_file(message.document.file_id)
     downloaded_file = bot.download_file(file_info.file_path)
-    with open('/home/yansoares/Dropbox/DSB_ARQUIVOS/'+ message.document.file_name, 'wb') as new_file:
+    with open('#CAMINHO DO DROPBOX'+ message.document.file_name, 'wb') as new_file:
         new_file.write(downloaded_file)
 
 # FILTRANDO MENSAGENS DO TIPO URL E ENCAMINHADO PARA O TELEGRAM DESTINO ALEM DE ATUALIZAR O REPOSITORIO
